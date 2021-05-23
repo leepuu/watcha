@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@300;400&display=swap");
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+em,
+img,
+strong,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+footer,
+header,
+section,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: "Roboto", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+	vertical-align: baseline;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	&:active,
+	&:hover,
+	&:focus {
+		color: inherit;
+	}
+}
+
+input {
+	border: 0;
+}
+button {
+	padding: 0;
+	border: 0;
+	background: unset;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.blind {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	box-shadow: rgb(0 0 0 / 8%) 0 1px 0 0;
+	background: #fff;
+	.btn {
+		margin-left: 24px;
+		font-size: 14px;
+		cursor: pointer;
+		&__login {
+			color: #74747b;
+		}
+		&__join {
+			width: auto;
+			min-width: 72px;
+			height: 32px;
+			color: #353535;
+			border-radius: 6px;
+			border: 1px solid rgba(116, 116, 123, 0.5);
+		}
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		max-width: 1320px;
+		height: 62px;
+		margin: 0 auto;
+		h1 {
+			width: 151px;
+			height: 29px;
+			a {
+				display: block;
+				&:after {
+					display: inline-block;
+					width: 151px;
+					height: 29px;
+					background: url(../images/logo.svg) no-repeat;
+					content: "";
+				}
+			}
+		}
+	}
+
+	.category {
+		display: flex;
+		margin-left: 45px;
+		li {
+			a {
+				font-size: 15px;
+				color: #7d7d7d;
+			}
+			& + li {
+				margin-left: 24px;
+			}
+			&:active {
+				a {
+					color: #353535;
+				}
+			}
+		}
+	}
+	.box_search {
+		max-width: 300px;
+		width: 100%;
+		margin: 0 0 0 auto;
+		input {
+			width: 100%;
+			height: 38px;
+			padding: 7px 10px 8px 36px;
+			background: #f5f5f7 url(../images/icon-search.svg) no-repeat 10px 10px;
+			&::-webkit-search-cancel-button {
+				-webkit-appearance: none;
+				width: 22px;
+				height: 22px;
+				right: 0;
+				background: url(../images/icon-clear.svg) no-repeat center;
+			}
+			&:valid {
+				&::-webkit-search-cancel-button {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
